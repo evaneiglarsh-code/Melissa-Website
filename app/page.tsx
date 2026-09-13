@@ -1,159 +1,107 @@
-const bookingEmail = "ReadingWithMC@gmail.com";
+import Image from "next/image";
+import melissaHeadshot from "../public/melissa-headshot.jpeg";
 
-const services = [
-  {
-    number: "01",
-    title: "Private Readings",
-    text: "A personal, evidential session created to bring clarity, comfort, and connection.",
-  },
-  {
-    number: "02",
-    title: "Messages from Heaven",
-    text: "Intimate and large-group galleries where spirit, story, and healing meet.",
-  },
-  {
-    number: "03",
-    title: "Spiritual Development",
-    text: "Classes and mentorship for learning to trust, understand, and honor your own intuition.",
-  },
+const bookingEmail = "ReadingWithMC@gmail.com";
+const bookingHref = `mailto:${bookingEmail}?subject=Reading with Melissa`;
+
+function SunMark({ small = false }: { small?: boolean }) {
+  return <span className={small ? "sun-mark sun-mark-small" : "sun-mark"} aria-hidden="true"><i /></span>;
+}
+
+function Lotus() {
+  return (
+    <svg className="service-icon lotus" viewBox="0 0 64 48" aria-hidden="true">
+      <path d="M32 42C22 34 20 22 32 7c12 15 10 27 0 35Z" />
+      <path d="M31 42C17 40 8 32 8 18c14 2 23 10 23 24Z" />
+      <path d="M33 42c14-2 23-10 23-24-14 2-23 10-23 24Z" />
+      <path d="M29 42C17 46 7 42 3 31c12-2 22 2 26 11Z" />
+      <path d="M35 42c12 4 22 0 26-11-12-2-22 2-26 11Z" />
+    </svg>
+  );
+}
+
+const offerings = [
+  { icon: <SunMark small />, title: "Psychic Readings", text: "Guidance, insight and messages that may bring clarity to your life." },
+  { icon: <span className="crescent" aria-hidden="true">☾</span>, title: "Mediumship", text: "Receive messages and connection from loved ones who have crossed over." },
+  { icon: <Lotus />, title: "Events & Gatherings", text: "Private events, group readings, spiritual gatherings and special experiences." },
 ];
 
 export default function Home() {
   return (
-    <main>
-      <nav className="nav shell" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="Melissa Cubillas home">
-          <span>MC</span>
-          <small>Melissa Cubillas</small>
+    <main id="home">
+      <header className="site-header shell">
+        <a className="brand" href="#home" aria-label="Melissa Cubillas home">
+          <SunMark />
+          <span className="brand-copy"><strong>Melissa Cubillas</strong><small>Psychic medium &amp; spiritual guide</small></span>
         </a>
-        <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#offerings">Offerings</a>
-          <a href="#events">Events</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <a className="nav-cta" href={`mailto:${bookingEmail}?subject=Reading inquiry`}>
-          Book a reading
-        </a>
-      </nav>
+        <nav aria-label="Primary navigation">
+          <a href="#home">Home</a><a href="#about">About</a><a href="#readings">Readings</a><a href="#events">Events</a><a href="#contact">Contact</a>
+        </nav>
+        <a className="pill-button" href={bookingHref}>Book a reading <span>→</span></a>
+      </header>
 
-      <section className="hero shell" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">International psychic medium · Spiritual teacher</p>
-          <h1>Love never<br />truly leaves us.</h1>
-          <p className="hero-intro">
-            Melissa Cubillas creates honest, healing connections between this world and the next—always with compassion, clarity, and a little Brooklyn soul.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-dark" href={`mailto:${bookingEmail}?subject=Reading inquiry`}>
-              Book a reading <span aria-hidden="true">↗</span>
-            </a>
-            <a className="text-link" href="#about">Discover Melissa <span aria-hidden="true">↓</span></a>
+      <section className="hero">
+        <div className="hero-wash" aria-hidden="true" />
+        <div className="hero-inner shell">
+          <div className="hero-copy">
+            <p className="eyebrow">Psychic medium &amp; spiritual guide</p>
+            <h1>Melissa<br />Cubillas</h1>
+            <p className="hero-lines"><em>Messages from beyond.</em><em>Clarity for the present.</em><em>Connection to what matters most.</em></p>
+            <a className="square-button" href={bookingHref}>Book a reading <span>→</span></a>
           </div>
-        </div>
-
-        <div className="hero-art" aria-label="Melissa Cubillas monogram artwork">
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
-          <div className="star star-one">✦</div>
-          <div className="star star-two">✧</div>
-          <div className="portrait-placeholder">
-            <span className="portrait-kicker">Psychic medium</span>
-            <strong>MC</strong>
-            <span className="portrait-caption">New York · Worldwide</span>
+          <div className="hero-portrait">
+            <div className="halo" aria-hidden="true" />
+            <Image src={melissaHeadshot} alt="Melissa Cubillas" fill priority placeholder="blur" sizes="(max-width: 760px) 100vw, 53vw" />
           </div>
-          <p className="handwritten">The soul always<br />finds a way.</p>
         </div>
       </section>
 
-      <section className="press-strip" aria-label="Selected media">
-        <span>As seen on</span>
-        <strong>BRAVO</strong>
-        <strong>OXYGEN</strong>
-        <strong>CTV</strong>
-        <strong>THE REAL HOUSEWIVES</strong>
+      <section className="connection section shell" id="readings">
+        <div className="ornament-heading"><span /><h2>A connection beyond the physical</h2><span /></div>
+        <p className="connection-intro">Melissa Cubillas is a gifted psychic medium and spiritual guide who helps people find clarity, healing and connection. Through compassionate, intuitive readings, she brings through messages from loved ones, offers insight into your path, and helps you reconnect with your higher self.</p>
+        <div className="offering-grid">
+          {offerings.map((offering) => (
+            <article key={offering.title} id={offering.title.startsWith("Events") ? "events" : undefined}>
+              <div className="icon-wrap">{offering.icon}</div><h3>{offering.title}</h3><p>{offering.text}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
-      <section className="about shell section" id="about">
-        <div className="section-label"><span>01</span> Meet Melissa</div>
-        <div className="about-grid">
-          <h2>Equal parts<br /><em>gifted</em> and grounded.</h2>
+      <section className="about section" id="about">
+        <div className="about-inner shell">
+          <div className="about-photo">
+            <div className="portrait-arch" aria-hidden="true" />
+            <Image src={melissaHeadshot} alt="Melissa Cubillas, psychic medium and spiritual guide" fill placeholder="blur" sizes="(max-width: 760px) 100vw, 45vw" />
+          </div>
           <div className="about-copy">
-            <p className="lead">
-              Melissa has communicated with spirit since she was three years old. Today, she is known around the world for readings that are compassionate, unmistakably honest, and deeply human.
-            </p>
-            <p>
-              Before embracing mediumship full time, Melissa worked as a celebrity makeup artist by day and a psychic medium by night. Sharing her story on television changed everything. Now she helps people reconnect with loved ones, find closure, and recognize their own intuitive abilities.
-            </p>
-            <a className="text-link dark" href={`mailto:${bookingEmail}?subject=Learn more about Melissa`}>More about Melissa <span>→</span></a>
+            <p className="eyebrow">About Melissa</p>
+            <h2>Guided by intuition.<br />Grounded in love.</h2>
+            <p>Melissa&apos;s journey as a psychic medium began at an early age, and her gift has only deepened with time. With a natural ability to connect with the spirit world and a deep sense of empathy, she brings comfort, clarity and healing to every session.</p>
+            <p>Her work is rooted in love, truth and the belief that we are never truly alone.</p>
+            <a className="text-link" href={`mailto:${bookingEmail}?subject=Learning more about Melissa`}>Learn more <span>→</span></a>
           </div>
         </div>
       </section>
 
-      <section className="offerings section" id="offerings">
-        <div className="shell">
-          <div className="section-label light"><span>02</span> Work with Melissa</div>
-          <div className="offerings-heading">
-            <h2>Connection takes<br />many forms.</h2>
-            <p>Begin wherever you are. Every experience is rooted in integrity, love, and the understanding that no two journeys look the same.</p>
-          </div>
-          <div className="service-list">
-            {services.map((service) => (
-              <article className="service" key={service.number}>
-                <span>{service.number}</span>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-                <a href={`mailto:${bookingEmail}?subject=${encodeURIComponent(service.title)}`} aria-label={`Inquire about ${service.title}`}>↗</a>
-              </article>
-            ))}
-          </div>
+      <section className="kind-words section shell" aria-label="Client experience">
+        <div className="ornament-heading"><span /><h2>What you can expect</h2><span /></div>
+        <div className="values-grid">
+          <article><strong>Compassion</strong><p>A warm, supportive space where you can feel seen, heard and at ease.</p></article>
+          <article><strong>Connection</strong><p>An honest, intuitive experience centered on the people and questions that matter most.</p></article>
+          <article><strong>Clarity</strong><p>Messages offered with care, integrity and room for your own inner knowing.</p></article>
         </div>
       </section>
 
-      <section className="quote-section shell section">
-        <div className="quote-mark">“</div>
-        <blockquote>
-          Melissa gave me more than a message. She gave me the unmistakable feeling that love continues—and the peace to move forward.
-        </blockquote>
-        <p>Client testimonial</p>
+      <section className="ready" id="contact">
+        <div className="ready-sun" aria-hidden="true" />
+        <div className="ready-inner shell"><h2>Ready to Connect?</h2><p>Book your private reading with Melissa.</p><a className="square-button" href={bookingHref}>Book a reading <span>→</span></a></div>
       </section>
 
-      <section className="events section" id="events">
-        <div className="shell events-grid">
-          <div>
-            <div className="section-label"><span>03</span> Gather together</div>
-            <h2>Upcoming<br />events</h2>
-          </div>
-          <article className="event-card">
-            <div className="date"><strong>10</strong><span>OCT<br />2026</span></div>
-            <div>
-              <p className="eyebrow">Staten Island, New York</p>
-              <h3>An Intimate Evening with Spirit</h3>
-              <p>Messages, connection, and a live Q&amp;A at the historic Jacques Marchais Museum of Tibetan Art.</p>
-            </div>
-            <a className="button button-outline" href="https://www.tibetanmuseum.org/event-details/an-intimate-evening-with-spirit-psychic-medium-melissa-cubillas" target="_blank" rel="noreferrer">Event details ↗</a>
-          </article>
-        </div>
-      </section>
-
-      <section className="contact section" id="contact">
-        <div className="moon" aria-hidden="true" />
-        <div className="shell contact-inner">
-          <p className="eyebrow">Your connection begins here</p>
-          <h2>There is more<br />waiting for you.</h2>
-          <p>For readings, events, media, and teaching inquiries, reach out to Melissa’s team.</p>
-          <a className="button button-light" href={`mailto:${bookingEmail}?subject=Website inquiry`}>Begin your inquiry <span>↗</span></a>
-        </div>
-      </section>
-
-      <footer className="footer shell">
-        <div className="brand footer-brand"><span>MC</span><small>Melissa Cubillas</small></div>
-        <p>Psychic medium · Spiritual teacher · Media personality</p>
-        <div className="footer-links">
-          <a href="https://www.instagram.com/melissamcmedium/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href={`mailto:${bookingEmail}`}>Email</a>
-        </div>
-        <small>© {new Date().getFullYear()} Melissa Cubillas. For entertainment purposes only.</small>
+      <footer className="site-footer shell">
+        <div className="brand footer-brand"><SunMark /><span className="brand-copy"><strong>Melissa Cubillas</strong><small>Psychic medium &amp; spiritual guide</small></span></div>
+        <nav aria-label="Footer navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#readings">Readings</a><a href="#events">Events</a><a href="#contact">Contact</a></nav>
+        <div className="social-links"><a href="https://www.instagram.com/melissamcmedium/" target="_blank" rel="noreferrer" aria-label="Melissa on Instagram">◎</a><a href={`mailto:${bookingEmail}`} aria-label="Email Melissa">✦</a></div>
       </footer>
     </main>
   );

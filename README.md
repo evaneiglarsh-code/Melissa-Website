@@ -1,6 +1,6 @@
 # Melissa Cubillas Website
 
-A modern, editorial website for Melissa Cubillas, psychic medium and spiritual teacher.
+A warm, editorial website for Melissa Cubillas, psychic medium and spiritual guide.
 
 ## Local development
 

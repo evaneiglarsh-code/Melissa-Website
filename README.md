@@ -17,4 +17,4 @@ The homepage content is in `app/page.tsx`. Colors and layout are in `app/globals
 
 ## Publishing
 
-This project is ready for GitHub and Vercel. Import the GitHub repository in Vercel; every future push to `main` will publish automatically.
+This repository is connected to Vercel. Every update to `main` automatically builds and publishes a new version.

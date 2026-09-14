@@ -3,6 +3,7 @@ import melissaHeadshot from "../public/melissa-headshot.jpeg";
 import expoWide from "../public/expo-wide.jpg";
 import expoStage from "../public/expo-stage.jpg";
 import paddleMeditation from "../public/paddle-meditation.jpg";
+import videoPoster from "../public/video-poster.jpg";
 
 const bookingEmail = "ReadingWithMC@gmail.com";
 const bookingHref = `mailto:${bookingEmail}?subject=Reading with Melissa`;
@@ -105,11 +106,9 @@ export default function Home() {
             </div>
             <p>Warm, quick-witted and unmistakably direct, Melissa brings heart and humanity to every message. See her gift in action.</p>
           </div>
-          <div className="video-frame">
-            <video controls playsInline preload="metadata" poster="/video-poster.jpg" aria-label="Melissa Cubillas live mediumship introduction">
-              <source src="/melissa-expo-story.mp4" type="video/mp4" />
-              Your browser does not support embedded video.
-            </video>
+          <div className="story-image">
+            <Image src={videoPoster} alt="Melissa Cubillas connecting with an audience at the 2026 Expo" fill placeholder="blur" sizes="(max-width: 760px) 100vw, 1200px" />
+            <div className="story-image-shade" aria-hidden="true" />
             <div className="video-caption"><span>01</span> Melissa live · 2026 Expo</div>
           </div>
         </div>

@@ -2,9 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Melissa Cubillas | Psychic Medium & Spiritual Teacher",
+  metadataBase: new URL("https://melissa-cubillas-website-evan-projects2.vercel.app"),
+  title: "Melissa Cubillas (MC) | International Psychic Medium",
   description:
-    "Connect, heal, and discover what lies beyond with international psychic medium and spiritual teacher Melissa Cubillas.",
+    "Connect with Melissa Cubillas—international psychic medium, spiritual teacher and media personality—for private readings, live galleries, events and intuitive development.",
+  openGraph: {
+    title: "Melissa Cubillas (MC) | International Psychic Medium",
+    description:
+      "Messages from beyond. Clarity for the present. Connection to what matters most.",
+    images: ["/melissa-headshot.jpeg"],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

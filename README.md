@@ -1,6 +1,10 @@
 # Melissa Cubillas Website
 
-A warm, editorial website for Melissa Cubillas, psychic medium and spiritual guide.
+A warm, editorial website for Melissa Cubillas, international psychic medium, spiritual teacher and media personality.
+
+## Experience
+
+The homepage features Melissa's story film, biography, offerings, live-event photography, media appearances, community work and client testimonials.
 
 ## Local development
 
@@ -10,10 +14,6 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
-
-## Updating content
-
-The homepage content is in `app/page.tsx`. Colors and layout are in `app/globals.css`.
 
 ## Publishing
 

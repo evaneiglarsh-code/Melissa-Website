@@ -130,7 +130,7 @@ export default function Home() {
           </div>
         </div>
         <div className="milestones shell" aria-label="Melissa's journey">
-          <article><strong>03</strong><span>Communicating with spirit since age three</span></article>
+          <article><strong>MC</strong><span>Evidential mediumship—delivered with honesty, heart and humor</span></article>
           <article><strong>TV</strong><span>Her story revealed on Oxygen&apos;s <em>Living Different</em></span></article>
           <article><strong>∞</strong><span>Now serving clients and audiences worldwide</span></article>
         </div>

@@ -174,6 +174,7 @@ export default function Home() {
           <h2>Spirit, service<br />&amp; a whole lot<br />of heart.</h2>
           <p>Melissa is known for being no-nonsense, spunky and deeply compassionate. Her work extends beyond readings—from spiritual interventions and house clearings to assisting with missing-person cases and helping others develop their own intuitive gifts.</p>
           <p>She serves on the Board of Directors for the Centered Heart Foundation, mentoring children as they discover their gifts and develop life skills. She also shares her time with organizations including Helping Parents Heal and Forever Family.</p>
+          <p>Melissa is also a certified Spiritualist minister for The Journey Within, Spiritual Church and Center for Spiritual Evolvement.</p>
         </div>
         <div className="mission-photo">
           <Image src={paddleMeditation} alt="Melissa practicing yoga on a paddleboard" fill placeholder="blur" sizes="(max-width: 760px) 100vw, 38vw" />

@@ -31,7 +31,7 @@ img, video { display: block; }
   background: var(--paper);
 }
 .brand { display: flex; align-items: center; gap: 16px; }
-.brand-monogram { width: 47px; height: 50px; object-fit: contain; flex: 0 0 auto; transform: scale(.86); }
+.brand-monogram { width: 47px; height: 50px; object-fit: contain; flex: 0 0 auto; }
 .brand-copy { display: flex; flex-direction: column; gap: 7px; }
 .brand-copy strong { font: 500 18px/1 var(--serif); text-transform: uppercase; letter-spacing: .23em; }
 .brand-copy small { font: 700 8px/1 var(--sans); text-transform: uppercase; letter-spacing: .3em; }

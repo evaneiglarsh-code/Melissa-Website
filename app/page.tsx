@@ -1,5 +1,6 @@
 import Image from "next/image";
 import melissaHeadshot from "../public/melissa-headshot.jpeg";
+import mcMonogram from "../public/mc-monogram.png";
 import expoWide from "../public/expo-wide.jpg";
 import expoStage from "../public/expo-stage.jpg";
 import paddleMeditation from "../public/paddle-meditation.jpg";
@@ -52,7 +53,7 @@ export default function Home() {
     <main id="home">
       <header className="site-header shell">
         <a className="brand" href="#home" aria-label="Melissa Cubillas home">
-          <SunMark />
+          <Image className="brand-monogram" src={mcMonogram} alt="" aria-hidden="true" priority />
           <span className="brand-copy">
             <strong>Melissa Cubillas</strong>
             <small>Psychic medium &amp; spiritual teacher</small>

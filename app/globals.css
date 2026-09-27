@@ -31,6 +31,7 @@ img, video { display: block; }
   background: var(--paper);
 }
 .brand { display: flex; align-items: center; gap: 16px; }
+.brand-monogram { width: 43px; height: 47px; object-fit: contain; flex: 0 0 auto; }
 .brand-copy { display: flex; flex-direction: column; gap: 7px; }
 .brand-copy strong { font: 500 18px/1 var(--serif); text-transform: uppercase; letter-spacing: .23em; }
 .brand-copy small { font: 700 8px/1 var(--sans); text-transform: uppercase; letter-spacing: .3em; }
@@ -184,6 +185,7 @@ img, video { display: block; }
   .section { padding-block: 76px; }
   .site-header { height: 76px; gap: 8px; }
   .sun-mark { width: 34px; height: 34px; }
+  .brand-monogram { width: 34px; height: 37px; }
   .sun-mark i { top: 11px; left: 11px; }
   .brand { gap: 10px; }
   .brand-copy strong { font-size: 12px; letter-spacing: .16em; }

@@ -9,10 +9,6 @@ import StoryVideo from "./StoryVideo";
 const bookingEmail = "ReadingWithMC@gmail.com";
 const bookingHref = `mailto:${bookingEmail}?subject=Reading with Melissa`;
 
-function SunMark({ small = false }: { small?: boolean }) {
-  return <span className={small ? "sun-mark sun-mark-small" : "sun-mark"} aria-hidden="true"><i /></span>;
-}
-
 const offerings = [
   {
     symbol: "✦",
@@ -223,7 +219,7 @@ export default function Home() {
 
       <footer className="site-footer shell">
         <div className="brand footer-brand">
-          <SunMark />
+          <Image className="brand-monogram" src={mcMonogram} alt="" aria-hidden="true" />
           <span className="brand-copy"><strong>Melissa Cubillas</strong><small>Psychic medium &amp; spiritual teacher</small></span>
         </div>
         <nav aria-label="Footer navigation"><a href="#story">Story</a><a href="#about">About</a><a href="#offerings">Offerings</a><a href="#testimonials">Testimonials</a></nav>

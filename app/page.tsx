@@ -1,8 +1,14 @@
 import Image from "next/image";
 import melissaHeadshot from "../public/melissa-headshot.jpeg";
 import mcMonogram from "../public/mc-monogram.png";
-import expoWide from "../public/expo-wide.jpg";
-import expoStage from "../public/expo-stage.jpg";
+import galleryFullRoom from "../public/gallery-full-room.jpg";
+import galleryStageSmile from "../public/gallery-stage-smile.jpg";
+import galleryMavis from "../public/gallery-mavis.jpg";
+import galleryPrivateReading from "../public/gallery-private-reading.jpg";
+import galleryChurch from "../public/gallery-church.jpg";
+import galleryHoldingSpace from "../public/gallery-holding-space.jpg";
+import galleryBill from "../public/gallery-bill.jpg";
+import galleryTeachingWide from "../public/gallery-teaching-wide.jpg";
 import paddleMeditation from "../public/paddle-meditation.jpg";
 import StoryVideo from "./StoryVideo";
 
@@ -45,6 +51,17 @@ const testimonials = [
     name: "Bill Philipps",
     role: "Psychic medium & author",
   },
+];
+
+const actionGallery = [
+  { src: galleryFullRoom, alt: "A full audience gathered for one of Melissa's live gallery events", className: "collage-full-room" },
+  { src: galleryStageSmile, alt: "Melissa smiling while speaking on stage", className: "collage-stage-smile" },
+  { src: galleryMavis, alt: "Melissa sharing a tender moment after a reading", className: "collage-mavis" },
+  { src: galleryPrivateReading, alt: "Melissa connecting with a guest during a private reading", className: "collage-private-reading" },
+  { src: galleryChurch, alt: "Melissa at The Journey Within Spiritual Church", className: "collage-church" },
+  { src: galleryHoldingSpace, alt: "Melissa connecting personally with members of an audience", className: "collage-holding-space" },
+  { src: galleryBill, alt: "Melissa with psychic medium and author Bill Philipps", className: "collage-bill" },
+  { src: galleryTeachingWide, alt: "Melissa teaching before a live audience", className: "collage-teaching-wide" },
 ];
 
 export default function Home() {
@@ -152,19 +169,20 @@ export default function Home() {
       </section>
 
       <section className="in-action">
-        <div className="action-grid shell">
+        <div className="action-heading shell">
           <div className="action-copy">
             <p className="eyebrow light">Melissa in action</p>
             <h2>From intimate moments<br />to full rooms.</h2>
             <p>Melissa regularly tours, sharing her gift through galleries, workshops, webinars, large groups and personalized mentorship programs. Her teaching has taken her across the U.S. and internationally, including the Omega Institute and the Fellowship of the Spirit in Lily Dale.</p>
           </div>
-          <div className="action-wide">
-            <Image src={expoWide} alt="Melissa speaking to a full audience at a live event" fill placeholder="blur" sizes="(max-width: 760px) 100vw, 65vw" />
-          </div>
-          <div className="action-stage">
-            <Image src={expoStage} alt="Melissa delivering messages during a live gallery" fill placeholder="blur" sizes="(max-width: 760px) 100vw, 37vw" />
-          </div>
           <p className="action-note">No two rooms are the same. Every gathering begins with the same intention: to create connection, healing and space for what matters most.</p>
+        </div>
+        <div className="action-collage shell">
+          {actionGallery.map((photo) => (
+            <figure className={`collage-photo ${photo.className}`} key={photo.className}>
+              <Image src={photo.src} alt={photo.alt} fill placeholder="blur" sizes="(max-width: 720px) 50vw, 42vw" />
+            </figure>
+          ))}
         </div>
       </section>
 

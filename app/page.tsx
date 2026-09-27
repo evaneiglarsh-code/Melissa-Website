@@ -7,7 +7,10 @@ import paddleMeditation from "../public/paddle-meditation.jpg";
 import StoryVideo from "./StoryVideo";
 
 const bookingEmail = "ReadingWithMC@gmail.com";
-const bookingHref = `mailto:${bookingEmail}?subject=Reading with Melissa`;
+const bookingHref = "#contact";
+const kerriPhone = "+17543077772";
+const kerriDisplayPhone = "754-307-7772";
+const textKerriHref = `sms:${kerriPhone}?&body=${encodeURIComponent("Hi Kerri! My name is ____, and I would like to request a reading with Melissa. My request is: ____")}`;
 
 const offerings = [
   {
@@ -210,10 +213,22 @@ export default function Home() {
       <section className="ready" id="contact">
         <div className="ready-sun" aria-hidden="true" />
         <div className="ready-inner shell">
-          <p className="eyebrow">Your connection begins here</p>
+          <p className="eyebrow">Private reading requests</p>
           <h2>Ready to connect?</h2>
-          <p>For readings, events, media and teaching inquiries, reach out to Melissa&apos;s team.</p>
-          <a className="square-button" href={bookingHref}>Book a reading <span>→</span></a>
+          <p>Melissa&apos;s assistant, Kerri, personally coordinates all private reading requests.</p>
+          <div className="booking-card">
+            <div className="booking-detail">
+              <span>Your booking contact</span>
+              <strong>Kerri</strong>
+              <a href={`sms:${kerriPhone}`}>{kerriDisplayPhone}</a>
+            </div>
+            <div className="booking-detail booking-request">
+              <span>What to include</span>
+              <p>Text your <strong>name</strong> and a brief description of your <strong>request</strong>.</p>
+            </div>
+            <a className="square-button booking-text-button" href={textKerriHref}>Text Kerri <span>→</span></a>
+          </div>
+          <small className="booking-note">Text message is the preferred way to reach Kerri.</small>
         </div>
       </section>
 

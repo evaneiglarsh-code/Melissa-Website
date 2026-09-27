@@ -176,7 +176,7 @@ export default function Home() {
           <p>She serves on the Board of Directors for the Centered Heart Foundation, mentoring children as they discover their gifts and develop life skills. She also shares her time with organizations including Helping Parents Heal and Forever Family.</p>
         </div>
         <div className="mission-photo">
-          <Image src={paddleMeditation} alt="Melissa meditating on the water" fill placeholder="blur" sizes="(max-width: 760px) 100vw, 38vw" />
+          <Image src={paddleMeditation} alt="Melissa practicing yoga on a paddleboard" fill placeholder="blur" sizes="(max-width: 760px) 100vw, 38vw" />
           <div className="mission-stamp"><span>Love</span><span>Integrity</span><span>Authenticity</span></div>
         </div>
       </section>

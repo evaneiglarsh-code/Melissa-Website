@@ -128,7 +128,6 @@ export default function Home() {
       <section className="about section" id="about">
         <div className="about-inner shell">
           <div className="about-photo">
-            <div className="portrait-arch" aria-hidden="true" />
             <Image src={melissaHeadshot} alt="Melissa Cubillas, international psychic medium" fill placeholder="blur" sizes="(max-width: 760px) 100vw, 44vw" />
           </div>
           <div className="about-copy">

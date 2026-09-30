@@ -113,23 +113,16 @@ img, video { display: block; }
 .action-copy h2 { font-size: clamp(49px, 5vw, 72px); }
 .action-copy > p:last-child { margin-top: 28px; color: #d5c6c8; font-size: 16px; line-height: 1.7; }
 .action-note { margin: 0 0 18px; max-width: 500px; padding-left: 34px; border-left: 1px solid rgba(255,255,255,.24); color: #d5c6c8; font-size: 19px; line-height: 1.65; font-style: italic; }
-.action-collage { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 90px; grid-auto-flow: dense; gap: 16px; }
-.collage-photo { position: relative; overflow: hidden; margin: 0; background: #6f5259; box-shadow: 0 14px 35px rgba(29,17,21,.18); }
-.collage-photo img { object-fit: cover; filter: saturate(.84) contrast(.97); transition: transform .65s ease, filter .65s ease; }
-.collage-photo:hover img { transform: scale(1.025); filter: saturate(.95) contrast(1); }
-.collage-full-room { grid-column: 1 / 9; grid-row: span 5; }
-.collage-stage-smile { grid-column: 9 / 13; grid-row: span 5; }
-.collage-mavis { grid-column: 1 / 5; grid-row: span 4; }
-.collage-private-reading { grid-column: 5 / 9; grid-row: span 4; }
-.collage-church { grid-column: 9 / 13; grid-row: span 4; }
-.collage-holding-space { grid-column: 1 / 4; grid-row: span 5; }
-.collage-bill { grid-column: 4 / 7; grid-row: span 5; }
-.collage-teaching-wide { grid-column: 7 / 13; grid-row: span 5; }
-.collage-stage-smile img { object-position: 50% 34%; }
-.collage-mavis img, .collage-private-reading img { object-position: 50% 38%; }
-.collage-church img { object-position: 50% 32%; }
-.collage-holding-space img { object-position: 50% 42%; }
-.collage-bill img { object-position: 50% 34%; }
+.action-feature {
+  position: relative;
+  min-height: 560px;
+  margin-top: 8px;
+  overflow: hidden;
+  background: #6f5259;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 24px 65px rgba(29,17,21,.28);
+}
+.action-feature img { object-fit: cover; object-position: center 48%; }
 
 .mission { display: grid; grid-template-columns: 1.07fr .93fr; gap: 10vw; align-items: center; }
 .mission-copy > p:not(.eyebrow) { max-width: 555px; color: var(--muted); font-size: 16px; line-height: 1.74; }
@@ -186,7 +179,7 @@ img, video { display: block; }
   .story-heading { grid-template-columns: 1fr; gap: 25px; }
   .site-footer { grid-template-columns: 1fr auto; }
   .site-footer nav { display: none; }
-  .action-collage { grid-auto-rows: 75px; }
+  .action-feature { min-height: 460px; }
   .mission { gap: 60px; }
 }
 
@@ -227,15 +220,8 @@ img, video { display: block; }
   .action-heading { grid-template-columns: 1fr; gap: 25px; margin-bottom: 38px; }
   .action-copy { padding-right: 0; }
   .action-note { padding: 18px 6px 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.24); }
-  .action-collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 155px; gap: 10px; width: 100%; }
-  .collage-full-room { grid-column: 1 / -1; grid-row: 1 / span 2; }
-  .collage-stage-smile { grid-column: 1; grid-row: 3 / span 3; }
-  .collage-church { grid-column: 2; grid-row: 3 / span 3; }
-  .collage-mavis { grid-column: 1; grid-row: 6 / span 2; }
-  .collage-private-reading { grid-column: 2; grid-row: 6 / span 2; }
-  .collage-holding-space { grid-column: 1; grid-row: 8 / span 3; }
-  .collage-bill { grid-column: 2; grid-row: 8 / span 3; }
-  .collage-teaching-wide { grid-column: 1 / -1; grid-row: 11 / span 2; }
+  .action-feature { width: 100%; min-height: 0; aspect-ratio: 4 / 3; border-inline: 0; }
+  .action-feature img { object-position: 53% 50%; }
   .mission-photo { min-height: 570px; width: calc(100% - 30px); margin-left: 30px; }
   .mission-stamp { left: -30px; bottom: 30px; width: 130px; height: 130px; }
   .ornament-heading { gap: 13px; }

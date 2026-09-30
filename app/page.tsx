@@ -86,7 +86,6 @@ export default function Home() {
       </header>
 
       <section className="hero">
-        <div className="hero-wash" aria-hidden="true" />
         <div className="hero-inner shell">
           <div className="hero-copy">
             <p className="eyebrow">International psychic medium · Spiritual teacher</p>
@@ -99,7 +98,6 @@ export default function Home() {
             <a className="square-button" href={bookingHref}>Book a reading <span>→</span></a>
           </div>
           <div className="hero-portrait">
-            <div className="halo" aria-hidden="true" />
             <Image src={melissaHeadshot} alt="Melissa Cubillas" fill priority placeholder="blur" sizes="(max-width: 760px) 100vw, 53vw" />
           </div>
         </div>

@@ -239,7 +239,7 @@ export default function Home() {
         </div>
         <nav aria-label="Footer navigation"><a href="#story">Story</a><a href="#about">About</a><a href="#offerings">Offerings</a><a href="#testimonials">Testimonials</a></nav>
         <div className="social-links"><a href="https://www.instagram.com/melissamcmedium/" target="_blank" rel="noreferrer" aria-label="Melissa on Instagram">◎</a><a href={`mailto:${bookingEmail}`} aria-label="Email Melissa">✦</a></div>
-        <small className="legal">© {new Date().getFullYear()} Melissa Cubillas · For entertainment purposes only.</small>
+        <small className="legal">Copyright © 2026 Lite as a Feather. All rights reserved. · For entertainment purposes only.</small>
       </footer>
     </main>
   );

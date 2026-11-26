@@ -27,7 +27,7 @@ function page(req: Request, message: string, status = 200) {
       <p><button name="action" value="publish">Publish signup form</button></p>
     </form>` : "<p>The required Production settings are not available in this deployment yet.</p>";
   return new Response(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Newsletter setup</title></head><body><main><h1>Melissa’s newsletter setup</h1><p>${message}</p>${form}</main></body></html>`, {
-    status, headers: { ...noStore, "Content-Type": "text/html; charset=utf-8", "X-Robots-Tag": "noindex", "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'" },
+    status, headers: { ...noStore, "Referrer-Policy": "same-origin", "Content-Type": "text/html; charset=utf-8", "X-Robots-Tag": "noindex", "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'" },
   });
 }
 

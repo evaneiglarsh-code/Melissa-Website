@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Script from "next/script";
+import NewsletterSignup from "./NewsletterSignup";
 import melissaHeadshot from "../public/melissa-headshot.jpeg";
 import mcMonogram from "../public/mc-monogram.png";
 import galleryFullRoom from "../public/gallery-full-room.jpg";
@@ -239,13 +239,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="newsletter" id="newsletter" aria-label="Stay in the know">
-        <div className="newsletter-inner shell">
-          <p className="eyebrow">Email updates</p>
-          <div className="ctct-inline-form" data-form-id="d10c1438-7bca-4275-bd7c-a01f36c8cedb" />
-          <noscript>Please enable JavaScript to sign up for email updates.</noscript>
-        </div>
-      </section>
+      <NewsletterSignup />
 
       <footer className="site-footer shell">
         <div className="brand footer-brand">
@@ -267,14 +261,6 @@ export default function Home() {
           <small>Copyright © 2026 Lite as a Feather. All rights reserved.</small>
           <FooterDisclaimer />
         </div>
-        <Script id="constant-contact-account" strategy="afterInteractive">
-          {'var _ctct_m = "77ba1ccac82785de0d7b4683d0fef5b4";'}
-        </Script>
-        <Script
-          id="signupScript"
-          src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js"
-          strategy="afterInteractive"
-        />
       </footer>
     </main>
   );

@@ -6,6 +6,8 @@ import galleryFullRoom from "../public/gallery-full-room.jpg";
 import paddleMeditation from "../public/paddle-meditation.jpg";
 import StoryVideo from "./StoryVideo";
 
+const eventbriteHref = "https://www.eventbrite.com/o/melissa-cubillas-psychic-medium-34733533623";
+
 const bookingEmail = "ReadingWithMC@gmail.com";
 const bookingHref = "#contact";
 const kerriPhone = "+17543077772";
@@ -155,7 +157,10 @@ export default function Home() {
             <h2>From intimate moments<br />to full rooms.</h2>
             <p>Melissa regularly tours, sharing her gift through galleries, workshops, webinars, large groups and personalized mentorship programs. Her teaching has taken her across the U.S. and internationally, including the Omega Institute and the Fellowship of the Spirit in Lily Dale.</p>
           </div>
-          <p className="action-note">No two rooms are the same. Every gathering begins with the same intention: to create connection, healing and space for what matters most.</p>
+          <div className="action-aside">
+            <p className="action-note">No two rooms are the same. Every gathering begins with the same intention: to create connection, healing and space for what matters most.</p>
+            <a className="action-events-link" href={eventbriteHref} target="_blank" rel="noopener noreferrer">View events on Eventbrite</a>
+          </div>
         </div>
         <figure className="action-feature shell">
           <Image
@@ -247,7 +252,16 @@ export default function Home() {
           <span className="brand-copy"><strong>Melissa Cubillas</strong><small>Psychic medium &amp; spiritual teacher</small></span>
         </div>
         <nav aria-label="Footer navigation"><a href="#story">Story</a><a href="#about">About</a><a href="#offerings">Offerings</a><a href="#testimonials">Testimonials</a></nav>
-        <div className="social-links"><a href="https://www.instagram.com/melissamcmedium/" target="_blank" rel="noreferrer" aria-label="Melissa on Instagram">◎</a><a href={`mailto:${bookingEmail}`} aria-label="Email Melissa">✦</a></div>
+        <div className="footer-follow" role="group" aria-label="Follow Melissa">
+          <p>Follow Melissa</p>
+          <div className="social-links">
+            <a href="https://www.instagram.com/melissamcmedium/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/psychicmediumMC/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://x.com/MelissaMCmedium" target="_blank" rel="noopener noreferrer">X</a>
+            <a href={eventbriteHref} target="_blank" rel="noopener noreferrer">Eventbrite</a>
+            <a href={`mailto:${bookingEmail}`}>Email</a>
+          </div>
+        </div>
         <small className="legal">Copyright © 2026 Lite as a Feather. All rights reserved.</small>
         <Script id="constant-contact-account" strategy="afterInteractive">
           {'var _ctct_m = "77ba1ccac82785de0d7b4683d0fef5b4";'}

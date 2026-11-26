@@ -5,6 +5,7 @@ import mcMonogram from "../public/mc-monogram.png";
 import galleryFullRoom from "../public/gallery-full-room.jpg";
 import paddleMeditation from "../public/paddle-meditation.jpg";
 import StoryVideo from "./StoryVideo";
+import FooterDisclaimer from "./FooterDisclaimer";
 
 const eventbriteHref = "https://www.eventbrite.com/o/melissa-cubillas-psychic-medium-34733533623";
 
@@ -262,7 +263,10 @@ export default function Home() {
             <a href={`mailto:${bookingEmail}`}>Email</a>
           </div>
         </div>
-        <small className="legal">Copyright © 2026 Lite as a Feather. All rights reserved.</small>
+        <div className="legal">
+          <small>Copyright © 2026 Lite as a Feather. All rights reserved.</small>
+          <FooterDisclaimer />
+        </div>
         <Script id="constant-contact-account" strategy="afterInteractive">
           {'var _ctct_m = "77ba1ccac82785de0d7b4683d0fef5b4";'}
         </Script>
